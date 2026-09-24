@@ -2,7 +2,10 @@ class Player {
     public:
         std::string name = "Aria";
         void increaseLife(int change);
+
+        //speed ente minSpeed y maxSpeed
         void increaseSpeed(int change);
+        void decreaseSpeed(int change);
         bool spendMoney(int change);
         void printPlayer();
     
@@ -16,5 +19,4 @@ class Player {
         float maxSpeed = 100;
         int gold = 50;
 
-    //speed ente minSpeed y maxSpeed
 };

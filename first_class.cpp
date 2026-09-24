@@ -6,16 +6,14 @@
 #include <string>
 #include "Player.hpp"
 
-#define clamp(a,b,c)  std::min((a),std::max((b),(c)))
-
 #endif
-
 
 void buyPotion(Player& p) {
     if(p.spendMoney(30)) {
         p.increaseLife(40);
+        printf("potion buyed! \n");
     } else {
-        printf( "estas pelao");
+        printf( "cant buy potion! \n");
     }
 }
 
@@ -27,15 +25,20 @@ void pickUpBoots(Player& P) {
     P.increaseSpeed(10);
 }
 
+void deleteBoots(Player& P) {
+    P.decreaseSpeed(30);
+}
+
 int main() {
     Player hero;
     hero.printPlayer();
 
     int precioArmadura = 200;
     if(hero.spendMoney(precioArmadura)) {
+        printf("armor buyed! \n");
         //equipar armadura
     } else {
-        printf("estas pelao!");
+        printf("cant buy armor! \n");
     }
 
     buyPotion(hero);
@@ -45,6 +48,9 @@ int main() {
     hero.printPlayer();
 
     pickUpBoots(hero);
+    hero.printPlayer();
+    deleteBoots(hero);
+    hero.printPlayer();
     pickUpBoots(hero);
     hero.printPlayer();
 
