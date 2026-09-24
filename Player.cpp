@@ -2,7 +2,7 @@
 #include <string>
 #include "Player.hpp"
 
-// learn this, min minimum value, 
+// learn this, min minimum value, then make the difference between change and max, then take the maximum or minimun, undertand this
 #define clamp(a,b,c)  std::min((c),std::max((a),(b)))
 
 void Player::printPlayer() {

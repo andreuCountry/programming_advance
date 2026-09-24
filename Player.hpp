@@ -2,12 +2,12 @@ class Player {
     public:
         std::string name = "Aria";
         void increaseLife(int change);
+        bool spendMoney(int change);
+        void printPlayer();
 
         //speed ente minSpeed y maxSpeed
         void increaseSpeed(int change);
         void decreaseSpeed(int change);
-        bool spendMoney(int change);
-        void printPlayer();
     
     private:
         float x = 0.0f;
