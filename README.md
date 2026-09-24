@@ -6,4 +6,4 @@ Just for compile all code we need to use a flag in our console:
 - all.cpp files to be compiled
 - execute the .exe file
 
-Example: ` cl first_class.cpp Player.cpp `  ` first_class`
+Example: ` cl flow_game.cpp Player.cpp `  ` flow_game`
